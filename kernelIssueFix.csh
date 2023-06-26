@@ -4,7 +4,7 @@ cat /usr/src/rpi4_kernel_build.sh
 KERNEL=kernel8
 
 cd linux
-## I like to clean manually iif required
+
 make -j 4 bcm2711_defconfig && make prepare && make oldconfig && make menuconfig && make -j 4
 make -j 4 modules dtbs
 make modules_install
